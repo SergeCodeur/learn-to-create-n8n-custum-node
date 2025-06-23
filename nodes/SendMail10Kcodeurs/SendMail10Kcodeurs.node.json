@@ -1,0 +1,17 @@
+{
+	"node": "n8n-nodes-base.sendMail10Kcodeurs",
+	"nodeVersion": "1.0",
+	"codex": {
+	  "categories": ["Communication"],
+	  "subcategories": {
+		"Communication": ["Email"]
+	  },
+	  "resources": {
+		"primaryDocumentation": [
+		  {
+			"url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.emailsend/"
+		  }
+		]
+	  }
+	}
+  }

@@ -1,19 +1,24 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-sendmail",
   "version": "0.1.0",
-  "description": "",
+  "description": "Nœud n8n personnalisé pour l'envoi d'emails via SMTP avec sauvegarde optionnelle des emails envoyés.",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "email",
+    "smtp",
+    "mail",
+    "sendmail",
+    "communication"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://n8n.io",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "SergeCodeur",
+    "email": "amoussougboserge@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/SergeCodeur/learn-to-create-n8n-custum-node.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -33,12 +38,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/nodes/SendMail10Kcodeurs/SendMail10KcodeursApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/SendMail10Kcodeurs/SendMail10Kcodeurs.node.js"
     ]
   },
   "devDependencies": {
@@ -47,9 +50,15 @@
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^5.0.0",
     "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "n8n-nodes-sendmail": "link:C:/Users/AMOUSSOUGBO/AppData/Local/pnpm/global/5/node_modules/n8n-nodes-sendmail",
+    "nodemailer": "^6.9.15"
   }
 }
