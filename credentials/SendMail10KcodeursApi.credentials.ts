@@ -1,12 +1,9 @@
-import {
-	ICredentialType,
-	INodeProperties,
-} from 'n8n-workflow';
+import { ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class SendMail10KcodeursApi implements ICredentialType {
 	name = 'sendMail10KcodeursApi';
 	displayName = 'SendMail 10Kcodeurs API';
-	documentationUrl = 'sendMail10Kcodeurs';
+	documentationUrl = 'https://github.com/SergeCodeur/n8n-nodes-send-mail#readme';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'User',
@@ -14,7 +11,7 @@ export class SendMail10KcodeursApi implements ICredentialType {
 			type: 'string',
 			default: '',
 			placeholder: 'name@email.com',
-			description: 'Adresse email pour l\'authentification SMTP',
+			description: "Adresse email pour l'authentification SMTP",
 		},
 		{
 			displayName: 'Password',
@@ -24,7 +21,7 @@ export class SendMail10KcodeursApi implements ICredentialType {
 				password: true,
 			},
 			default: '',
-			description: 'Mot de passe pour l\'authentification SMTP',
+			description: "Mot de passe pour l'authentification SMTP",
 		},
 		{
 			displayName: 'Host',

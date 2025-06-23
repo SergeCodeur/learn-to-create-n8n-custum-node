@@ -11,7 +11,7 @@
 		"communication"
 	],
 	"license": "MIT",
-	"homepage": "https://n8n.io",
+	"homepage": "",
 	"author": {
 		"name": "SergeCodeur",
 		"email": "amoussougboserge@gmail.com"
@@ -21,16 +21,19 @@
 		"url": "https://github.com/SergeCodeur/n8n-nodes-send-mail.git"
 	},
 	"engines": {
-		"node": ">=20.15"
+		"node": ">=20.15",
+		"pnpm": ">=9.1"
 	},
+	"packageManager": "pnpm@10.11.0",
 	"main": "index.js",
 	"scripts": {
-		"build": "npx rimraf dist && tsc && gulp build:icons",
+		"preinstall": "npx only-allow pnpm",
+		"build": "tsc && gulp build:icons",
 		"dev": "tsc --watch",
 		"format": "prettier nodes credentials --write",
 		"lint": "eslint nodes credentials package.json",
 		"lintfix": "eslint nodes credentials package.json --fix",
-		"prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+		"prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
 	},
 	"files": [
 		"dist"
@@ -58,7 +61,6 @@
 	},
 	"dependencies": {
 		"@types/nodemailer": "^6.4.17",
-		"n8n-nodes-sendmail": "link:C:/Users/AMOUSSOUGBO/AppData/Local/pnpm/global/5/node_modules/n8n-nodes-sendmail",
 		"nodemailer": "^6.9.15"
 	}
 }
